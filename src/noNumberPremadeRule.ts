@@ -1,5 +1,4 @@
 import * as ts from "typescript";
-import * as Lint from "tslint";
 import { Rules, IRuleMetadata, RuleFailure, WalkContext } from "tslint";
 
 export class Rule extends Rules.TypedRule {
@@ -22,9 +21,6 @@ function walk(ctx: WalkContext<null>, checker: ts.TypeChecker) {
     ts.forEachChild(ctx.sourceFile, processNode);
 
     function processNode(node: ts.Node) {
-        const foo = 2;
-        const bar = foo;
-        const car: number = bar;
         if (node.kind === ts.SyntaxKind.NumericLiteral) {
             ctx.addFailureAtNode(node, "You hooligan!");
             return;
