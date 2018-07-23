@@ -1,0 +1,16 @@
+{
+  "name": "tslintcustomrule",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint -t stylish --project .",
+    "build": "tsc -p .",
+    "test": "tslint --rules-dir ./dist --test test/*/tslint.json "
+  },
+  "dependencies": {
+    "@types/node": "^10.5.2",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  }
+}

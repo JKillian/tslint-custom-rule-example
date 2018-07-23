@@ -1,0 +1,13 @@
+const aString = "this is a string;
+
+const var0 = 10;
+      ~~~~      [no-number]
+             ~~ [You hooligan!]
+const var1 = var0;
+      ~~~~      [no-number]
+             ~~~~      [no-number]
+const var2: number = var1;
+      ~~~~      [no-number]
+                     ~~~~      [no-number]
+
+[no-number]: A secret number! Burn it!
